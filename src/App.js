@@ -1,5 +1,13 @@
+import { GlobalStyle } from "./Style";
+import MenuBar from "./components/MenuBar/MenuBar";
+
 function App() {
-  return <div></div>;
+  return (
+    <>
+      <GlobalStyle></GlobalStyle>
+      <MenuBar></MenuBar>
+    </>
+  );
 }
 
 export default App;
