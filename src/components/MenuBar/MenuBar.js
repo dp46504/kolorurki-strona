@@ -6,12 +6,11 @@ import {
   MenuItems,
   MenuBarOutContainer,
   BurgerMenu,
-  CloseMenuButton,
+  BlurLayer,
 } from "./Style";
 import { ReactComponent as FacebookIcon } from "../../assets/facebook-icon.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/instagram-icon.svg";
 import { ReactComponent as MenuIcon } from "../../assets/menu-icon.svg";
-import { ReactComponent as XIcon } from "../../assets/x-icon.svg";
 
 function MenuBar(props) {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -30,14 +29,12 @@ function MenuBar(props) {
 
   return (
     <>
+      {/* <BlurLayer showed={menuOpened}></BlurLayer> */}
       <BurgerMenu onClick={toggleMenu}>
         <MenuIcon></MenuIcon>
       </BurgerMenu>
       <MenuBarOutContainer id="menu">
         <Container>
-          <CloseMenuButton onClick={toggleMenu}>
-            <XIcon></XIcon>
-          </CloseMenuButton>
           <MenuItems>
             <MenuItem>Zajęcia</MenuItem>
             <MenuItem>Zespół</MenuItem>
@@ -47,8 +44,12 @@ function MenuBar(props) {
             <MenuItem>Kontakt</MenuItem>
           </MenuItems>
           <SocialMediaLinks>
-            <FacebookIcon></FacebookIcon>
-            <InstagramIcon></InstagramIcon>
+            <a href="https://www.facebook.com/Ko%C5%82o-rurki-100192172080611">
+              <FacebookIcon></FacebookIcon>
+            </a>
+            <a href="https://www.instagram.com/kolo.rurki/">
+              <InstagramIcon></InstagramIcon>
+            </a>
           </SocialMediaLinks>
         </Container>
       </MenuBarOutContainer>
