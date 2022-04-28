@@ -54,7 +54,7 @@ function Body(props) {
       <BodyContainer>
         <MainTitle>{strings.MAIN_TITLE}</MainTitle>
         <MainDescription>{strings.MAIN_DESCRIPTION}</MainDescription>
-        <SectionTitle>Zajęcia</SectionTitle>
+        <SectionTitle id="classes">Zajęcia</SectionTitle>
         <Classes id="classes_section">
           {strings.SECTIONS.ZAJECIA.CARDS.map((info) => {
             return (
@@ -66,18 +66,8 @@ function Body(props) {
             );
           })}
         </Classes>
-        <SectionTitle>Zespół</SectionTitle>
+        <SectionTitle id="team">Zespół</SectionTitle>
         <Team>
-          {strings.SECTIONS.ZAJECIA.CARDS.map((info) => {
-            return (
-              <PersonCardContainer image={info.IMAGE}>
-                <PersonCardDescription>
-                  <PersonCardName>{info.TITLE}</PersonCardName>
-                  {info.DESCRIPTION}
-                </PersonCardDescription>
-              </PersonCardContainer>
-            );
-          })}
           {strings.SECTIONS.ZAJECIA.CARDS.map((info) => {
             return (
               <PersonCardContainer image={info.IMAGE}>

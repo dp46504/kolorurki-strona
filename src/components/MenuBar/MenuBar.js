@@ -18,6 +18,9 @@ function MenuBar(props) {
   const [menuOpened, setMenuOpened] = useState(false);
 
   const toggleMenu = () => {
+    if (window.innerWidth > breakingPointPhone.split("px")[0]) {
+      return null;
+    }
     if (menuOpened) {
       // Close menu
       document.getElementById("menu").style.left = "-100vw";
@@ -43,8 +46,12 @@ function MenuBar(props) {
             {window.innerWidth <= breakingPointPhone.split("px")[0] ? (
               <Logo style={{ marginTop: "0" }}></Logo>
             ) : null}
-            <MenuItem>Zajęcia</MenuItem>
-            <MenuItem>Zespół</MenuItem>
+            <a href="#classes" onClick={toggleMenu}>
+              <MenuItem>Zajęcia</MenuItem>
+            </a>
+            <a href="#team" onClick={toggleMenu}>
+              <MenuItem>Zespół</MenuItem>
+            </a>
             <MenuItem>Grafik</MenuItem>
             <MenuItem>Cennik</MenuItem>
             <MenuItem>Galeria</MenuItem>

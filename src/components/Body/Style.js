@@ -50,7 +50,7 @@ export const CardDescription = styled.div`
   color: ${colors.gray};
   font-family: "Lato";
   font-size: 0.9em;
-  height: 10rem;
+  height: 7rem;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     transition: all 250ms;
@@ -74,6 +74,7 @@ export const PersonCardDescription = styled.div`
   justify-content: flex-start;
   align-items: center;
   text-align: center;
+  font-family: "Lato";
   width: 100%;
   height: 100%;
   background-color: ${colors.ecrue75};

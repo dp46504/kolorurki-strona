@@ -2,24 +2,6 @@ import styled, { createGlobalStyle } from "styled-components";
 import { ReactComponent as BackArrow } from "./assets/back-icon.svg";
 
 export const breakingPointPhone = "600px";
-
-export const GlobalStyle = createGlobalStyle`
-html, body{
-    margin:0;
-    padding: 0;
-    margin:0 auto;
-}
-
-
-*{
-    box-sizing:border-box;
-
-    }
-    .noscroll{
-      overflow: hidden;
-    }
-`;
-
 export const colors = {
   gray: "#434343",
   white: "#ffff",
@@ -30,6 +12,29 @@ export const colors = {
   ecrue: "#f8f5f2",
   ecrue75: "#f8f5f2dd",
 };
+
+export const GlobalStyle = createGlobalStyle`
+html, body{
+    margin:0;
+    padding: 0;
+    margin:0 auto;
+    scroll-behavior:smooth ;
+}
+
+a{
+  text-decoration: none;
+  &:visited{
+    color: ${colors.gray};
+  }
+}
+*{
+    box-sizing:border-box;
+
+    }
+    .noscroll{
+      overflow: hidden;
+    }
+`;
 
 export const BodyContainer = styled.div`
   width: clamp(100px, 90%, 1200px);
@@ -58,6 +63,7 @@ export const MainDescription = styled.div`
 `;
 
 export const SectionTitle = styled.div`
+  scroll-margin-top: 4rem;
   margin: 4rem 0 1rem 0;
   align-self: flex-start;
   font-weight: bold;

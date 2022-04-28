@@ -22,19 +22,6 @@ export const BurgerMenu = styled.div`
   }
 `;
 
-export const BlurLayer = styled.div`
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  transition: all 250ms;
-  display: ${(props) => {
-    return props.showed ? "block" : "none";
-  }};
-  backdrop-filter: blur(10px);
-`;
 // END BURGER MENU ================================
 
 export const MenuBarOutContainer = styled.div`
@@ -52,7 +39,7 @@ export const MenuBarOutContainer = styled.div`
   color: ${colors.gray};
   background-color: ${colors.white75};
   @media screen and (max-width: ${breakingPointPhone}) {
-    background-color: ${colors.white25};
+    background-color: ${colors.white50};
     transition: all 250ms;
     width: 100vw;
     height: 100vh;
