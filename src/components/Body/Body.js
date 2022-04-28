@@ -126,8 +126,22 @@ function Body(props) {
       {/* Entering body again */}
       <BodyContainer>
         <SectionTitle id="scheduleOpen">Grafik - Sala Open</SectionTitle>
-        <ScheduleOpen></ScheduleOpen>
+
+        {/* Escape body to put wide panel */}
       </BodyContainer>
+      {/* Putting wide color panel */}
+      <WideColorPanel>
+        {/* Entering body again */}
+        <BodyContainer>
+          {/* Content */}
+          <ScheduleOpen></ScheduleOpen>
+
+          {/* Exiting body */}
+        </BodyContainer>
+        {/* Exiting wide color panel */}
+      </WideColorPanel>
+      {/* Entering body again */}
+      <BodyContainer></BodyContainer>
     </>
   );
 }
