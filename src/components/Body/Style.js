@@ -32,6 +32,7 @@ export const CardImage = styled.div`
   width: 100%;
   margin-bottom: 0.5rem;
   user-drag: none;
+  box-shadow: 0.2rem 0.2rem 10px ${colors.lightGray};
 `;
 
 export const CardTitle = styled.div`
@@ -112,6 +113,8 @@ export const PersonCardContainer = styled.div`
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0.2rem 0.2rem 10px ${colors.lightGray};
+
   &:hover ${PersonCardDescription} {
     opacity: 1;
   }
