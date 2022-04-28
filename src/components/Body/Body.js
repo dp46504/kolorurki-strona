@@ -5,8 +5,17 @@ import {
   Classes,
   BodyContainer,
   SectionTitle,
+  Team,
 } from "../../Style";
-import { CardContainer, CardImage, CardDescription, CardTitle } from "./Style";
+import {
+  CardContainer,
+  CardImage,
+  CardDescription,
+  CardTitle,
+  PersonCardDescription,
+  PersonCardContainer,
+  PersonCardName,
+} from "./Style";
 import Image from "../../assets/image.jpeg";
 import strings from "../../strings.json";
 
@@ -57,6 +66,29 @@ function Body(props) {
             );
           })}
         </Classes>
+        <SectionTitle>Zespół</SectionTitle>
+        <Team>
+          {strings.SECTIONS.ZAJECIA.CARDS.map((info) => {
+            return (
+              <PersonCardContainer image={info.IMAGE}>
+                <PersonCardDescription>
+                  <PersonCardName>{info.TITLE}</PersonCardName>
+                  {info.DESCRIPTION}
+                </PersonCardDescription>
+              </PersonCardContainer>
+            );
+          })}
+          {strings.SECTIONS.ZAJECIA.CARDS.map((info) => {
+            return (
+              <PersonCardContainer image={info.IMAGE}>
+                <PersonCardDescription>
+                  <PersonCardName>{info.TITLE}</PersonCardName>
+                  {info.DESCRIPTION}
+                </PersonCardDescription>
+              </PersonCardContainer>
+            );
+          })}
+        </Team>
       </BodyContainer>
     </>
   );

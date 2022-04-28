@@ -26,8 +26,9 @@ export const colors = {
   white50: "#fffa",
   white25: "#fff5",
   white75: "#fffd",
-  lightGray: "#767676",
+  lightGray: "#bababa",
   ecrue: "#f8f5f2",
+  ecrue75: "#f8f5f2dd",
 };
 
 export const BodyContainer = styled.div`
@@ -57,7 +58,7 @@ export const MainDescription = styled.div`
 `;
 
 export const SectionTitle = styled.div`
-  margin: 1rem 0;
+  margin: 4rem 0 1rem 0;
   align-self: flex-start;
   font-weight: bold;
   font-size: 1.5rem;
@@ -98,4 +99,17 @@ export const Classes = styled.div`
     background: ${colors.lightGray};
     border-radius: 0.1rem; /* roundness of the scroll thumb */
   }
+`;
+
+export const Team = styled.div`
+  gap: 1rem;
+  padding: 2rem 0;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: ${colors.ecrue};
+  justify-content: center;
+  align-items: center;
 `;
