@@ -23,7 +23,7 @@ html, body{
 
 a{
   text-decoration: none;
-  &:visited{
+  &:any-link{
     color: ${colors.gray};
   }
 }
@@ -53,7 +53,7 @@ export const MainPicture = styled.div`
     to top, transparent, ${colors.white}
   ), url(${props.image})`;
   }};
-  background-position: center center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
 `;
@@ -127,7 +127,40 @@ export const Team = styled.div`
   height: fit-content;
   display: flex;
   flex-wrap: wrap;
-  background-color: ${colors.ecrue};
   justify-content: center;
   align-items: center;
+`;
+
+export const Schedule = styled.div`
+  gap: 1rem;
+  padding: 2rem 0;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: ${breakingPointPhone}) {
+    width: 100vw;
+  }
+`;
+
+export const ScheduleOpen = styled.div`
+  gap: 1rem;
+  padding: 2rem 0;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: ${colors.ecrue};
+`;
+
+export const WideColorPanel = styled.div`
+  width: 100%;
+  height: fit-content;
+  background-color: ${colors.ecrue};
 `;

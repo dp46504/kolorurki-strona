@@ -6,6 +6,10 @@ import {
   BodyContainer,
   SectionTitle,
   Team,
+  Schedule,
+  colors,
+  ScheduleOpen,
+  WideColorPanel,
 } from "../../Style";
 import {
   CardContainer,
@@ -16,7 +20,6 @@ import {
   PersonCardContainer,
   PersonCardName,
 } from "./Style";
-import Image from "../../assets/image.jpeg";
 import strings from "../../strings.json";
 
 function Body(props) {
@@ -55,18 +58,33 @@ function Body(props) {
         <MainTitle>{strings.MAIN_TITLE}</MainTitle>
         <MainDescription>{strings.MAIN_DESCRIPTION}</MainDescription>
         <SectionTitle id="classes">Zajęcia</SectionTitle>
-        <Classes id="classes_section">
-          {strings.SECTIONS.ZAJECIA.CARDS.map((info) => {
-            return (
-              <CardContainer>
-                <CardImage image={info.IMAGE}></CardImage>
-                <CardTitle>{info.TITLE}</CardTitle>
-                <CardDescription>{info.DESCRIPTION}</CardDescription>
-              </CardContainer>
-            );
-          })}
-        </Classes>
+
+        {/* Escape body to put wide panel */}
+      </BodyContainer>
+      {/* Putting wide color panel */}
+      <WideColorPanel>
+        {/* Entering body again */}
+        <BodyContainer>
+          {/* Content */}
+          <Classes id="classes_section">
+            {strings.SECTIONS.ZAJECIA.CARDS.map((info) => {
+              return (
+                <CardContainer>
+                  <CardImage image={info.IMAGE}></CardImage>
+                  <CardTitle>{info.TITLE}</CardTitle>
+                  <CardDescription>{info.DESCRIPTION}</CardDescription>
+                </CardContainer>
+              );
+            })}
+          </Classes>
+          {/* Exiting body */}
+        </BodyContainer>
+        {/* Exiting wide color panel */}
+      </WideColorPanel>
+      {/* Entering body again */}
+      <BodyContainer>
         <SectionTitle id="team">Zespół</SectionTitle>
+
         <Team>
           {strings.SECTIONS.ZESPOL.map((info) => {
             return (
@@ -79,6 +97,36 @@ function Body(props) {
             );
           })}
         </Team>
+
+        <SectionTitle id="schedule">Grafik</SectionTitle>
+
+        {/* Escape body to put wide panel */}
+      </BodyContainer>
+      {/* Putting wide color panel */}
+      <WideColorPanel>
+        {/* Entering body again */}
+        <BodyContainer>
+          {/* Content */}
+          <Schedule>
+            <iframe
+              title="schedule"
+              src={`https://wod.guru/grafik/kolorurki?bgColor=${
+                colors.ecrue.split("#")[1]
+              }`}
+              width="100%"
+              height="1000px"
+              frameborder="0"
+            ></iframe>
+          </Schedule>
+
+          {/* Exiting body */}
+        </BodyContainer>
+        {/* Exiting wide color panel */}
+      </WideColorPanel>
+      {/* Entering body again */}
+      <BodyContainer>
+        <SectionTitle id="scheduleOpen">Grafik - Sala Open</SectionTitle>
+        <ScheduleOpen></ScheduleOpen>
       </BodyContainer>
     </>
   );

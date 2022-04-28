@@ -52,7 +52,10 @@ function MenuBar(props) {
             <a href="#team" onClick={toggleMenu}>
               <MenuItem>Zespół</MenuItem>
             </a>
-            <MenuItem>Grafik</MenuItem>
+            <a href="#schedule" onClick={toggleMenu}>
+              <MenuItem>Grafik</MenuItem>
+            </a>
+
             <MenuItem>Cennik</MenuItem>
             <MenuItem>Galeria</MenuItem>
             <MenuItem>Kontakt</MenuItem>
