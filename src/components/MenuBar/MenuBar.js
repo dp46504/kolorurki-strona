@@ -8,6 +8,8 @@ import {
   BurgerMenu,
   BlurLayer,
 } from "./Style";
+import { breakingPointPhone } from "../../Style";
+import Logo from "../Logo/Logo";
 import { ReactComponent as FacebookIcon } from "../../assets/facebook-icon.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/instagram-icon.svg";
 import { ReactComponent as MenuIcon } from "../../assets/menu-icon.svg";
@@ -20,10 +22,12 @@ function MenuBar(props) {
       // Close menu
       document.getElementById("menu").style.left = "-100vw";
       setMenuOpened((previous) => !previous);
+      document.getElementsByTagName("body")[0].classList.toggle("noscroll");
     } else {
       // Open menu
       document.getElementById("menu").style.left = "0";
       setMenuOpened((previous) => !previous);
+      document.getElementsByTagName("body")[0].classList.toggle("noscroll");
     }
   };
 
@@ -36,6 +40,9 @@ function MenuBar(props) {
       <MenuBarOutContainer id="menu">
         <Container>
           <MenuItems>
+            {window.innerWidth <= breakingPointPhone.split("px")[0] ? (
+              <Logo style={{ marginTop: "0" }}></Logo>
+            ) : null}
             <MenuItem>Zajęcia</MenuItem>
             <MenuItem>Zespół</MenuItem>
             <MenuItem>Grafik</MenuItem>

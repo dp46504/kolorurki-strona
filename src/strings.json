@@ -1,0 +1,26 @@
+{
+  "MAIN_TITLE": "Wierzymy, że to ludzie tworzą miejsce.\nProjektuj miejsce razem z nami!",
+  "MAIN_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa libero, porttitor dapibus tempus quis, convallis quis ante. Cras hendrerit bibendum ex, id pharetra mauris feugiat eget. Aenean convallis tortor sed felis ornare, at euismod arcu rutrum. Nullam laoreet sapien vitae ipsum interdum, et tincidunt eros molestie. Donec eget pretium elit, quis varius ipsum. Nunc laoreet, lectus ac luctus porttitor, elit ex sollicitudin libero, sed faucibus magna purus ac nibh. Mauris luctus a magna nec faucibus. Cras ultrices, turpis ac pharetra ullamcorper, mauris elit vehicula tortor, quis egestas nulla odio sit amet urna. Integer eget accumsan dui. Sed libero purus, rutrum sit amet tortor ut, sodales mollis libero.",
+  "SECTIONS": {
+    "ZAJECIA": {
+      "TITLE": "Zajęcia",
+      "CARDS": [
+        {
+          "IMAGE": "https://firebasestorage.googleapis.com/v0/b/kolorurki-strona.appspot.com/o/zajecia_poledance.jpg?alt=media&token=2062696c-ff23-4427-9947-fc66bf04ede4",
+          "TITLE": "Pole Dance",
+          "DESCRIPTION": "Lorem ipsum pole"
+        },
+        {
+          "IMAGE": "https://firebasestorage.googleapis.com/v0/b/kolorurki-strona.appspot.com/o/zajecia_exoticdance.jpg?alt=media&token=2e6a6c95-9336-45a1-87a5-e2fa534f3b49",
+          "TITLE": "Exotic Dance",
+          "DESCRIPTION": "Lorem ipsum exotic"
+        },
+        {
+          "IMAGE": "https://firebasestorage.googleapis.com/v0/b/kolorurki-strona.appspot.com/o/zajecia_circledance.png?alt=media&token=2c01fd9b-3adf-4579-85a1-a8744d4f15dd",
+          "TITLE": "Circle Dance",
+          "DESCRIPTION": "Lorem ipsum circle"
+        }
+      ]
+    }
+  }
+}

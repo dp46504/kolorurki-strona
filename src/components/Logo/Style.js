@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../Style";
+import { breakingPointPhone, colors } from "../../Style";
 
 export const LogoBox = styled.div`
   position: relative;
@@ -10,6 +10,10 @@ export const LogoBox = styled.div`
   aspect-ratio: 2;
   font-size: 0.5rem;
   font-family: "Lato";
+  @media screen and (max-width: ${breakingPointPhone}) {
+    transform: scale(0.8);
+    margin-top: 0;
+  }
 `;
 
 export const LogoBall = styled.div`
