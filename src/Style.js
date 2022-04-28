@@ -45,6 +45,18 @@ export const BodyContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
 `;
+export const MainPicture = styled.div`
+  width: 100%;
+  height: calc(100vh - 15.5rem);
+  background: ${(props) => {
+    return `linear-gradient(
+    to top, transparent, ${colors.white}
+  ), url(${props.image})`;
+  }};
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
 
 export const MainTitle = styled.div`
   font-family: "Playfair Display";

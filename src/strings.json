@@ -1,4 +1,5 @@
 {
+  "MAIN_IMAGE": "https://firebasestorage.googleapis.com/v0/b/kolorurki-strona.appspot.com/o/mainImage.jpg?alt=media&token=737337ad-a12b-417e-85d3-fb6c6d835cc4",
   "MAIN_TITLE": "Wierzymy, że to ludzie tworzą miejsce.\nProjektuj miejsce razem z nami!",
   "MAIN_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed massa libero, porttitor dapibus tempus quis, convallis quis ante. Cras hendrerit bibendum ex, id pharetra mauris feugiat eget. Aenean convallis tortor sed felis ornare, at euismod arcu rutrum. Nullam laoreet sapien vitae ipsum interdum, et tincidunt eros molestie. Donec eget pretium elit, quis varius ipsum. Nunc laoreet, lectus ac luctus porttitor, elit ex sollicitudin libero, sed faucibus magna purus ac nibh. Mauris luctus a magna nec faucibus. Cras ultrices, turpis ac pharetra ullamcorper, mauris elit vehicula tortor, quis egestas nulla odio sit amet urna. Integer eget accumsan dui. Sed libero purus, rutrum sit amet tortor ut, sodales mollis libero.",
   "SECTIONS": {
@@ -21,6 +22,23 @@
           "DESCRIPTION": "Lorem ipsum circle"
         }
       ]
-    }
+    },
+    "ZESPOL": [
+      {
+        "IMAGE": "https://firebasestorage.googleapis.com/v0/b/kolorurki-strona.appspot.com/o/zajecia_exoticdance.jpg?alt=media&token=2e6a6c95-9336-45a1-87a5-e2fa534f3b49",
+        "NAME": "Maja Bonarska",
+        "DESCRIPTION": "Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole "
+      },
+      {
+        "IMAGE": "https://firebasestorage.googleapis.com/v0/b/kolorurki-strona.appspot.com/o/zajecia_exoticdance.jpg?alt=media&token=2e6a6c95-9336-45a1-87a5-e2fa534f3b49",
+        "NAME": "Maja Bonarska2",
+        "DESCRIPTION": "Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum"
+      },
+      {
+        "IMAGE": "https://firebasestorage.googleapis.com/v0/b/kolorurki-strona.appspot.com/o/zajecia_exoticdance.jpg?alt=media&token=2e6a6c95-9336-45a1-87a5-e2fa534f3b49",
+        "NAME": "Maja Bonarska3",
+        "DESCRIPTION": "Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum"
+      }
+    ]
   }
 }

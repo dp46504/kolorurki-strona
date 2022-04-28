@@ -68,11 +68,11 @@ function Body(props) {
         </Classes>
         <SectionTitle id="team">Zespół</SectionTitle>
         <Team>
-          {strings.SECTIONS.ZAJECIA.CARDS.map((info) => {
+          {strings.SECTIONS.ZESPOL.map((info) => {
             return (
               <PersonCardContainer image={info.IMAGE}>
                 <PersonCardDescription>
-                  <PersonCardName>{info.TITLE}</PersonCardName>
+                  <PersonCardName>{info.NAME}</PersonCardName>
                   {info.DESCRIPTION}
                 </PersonCardDescription>
               </PersonCardContainer>

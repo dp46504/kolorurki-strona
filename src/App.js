@@ -1,7 +1,8 @@
-import { GlobalStyle } from "./Style";
+import { GlobalStyle, MainPicture } from "./Style";
 import MenuBar from "./components/MenuBar/MenuBar";
 import Logo from "./components/Logo/Logo";
 import Body from "./components/Body/Body";
+import strings from "./strings.json";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <MenuBar></MenuBar>
       <Logo></Logo>
       {/* Big Picture */}
+      <MainPicture image={strings.MAIN_IMAGE}></MainPicture>
       <Body></Body>
     </>
   );
