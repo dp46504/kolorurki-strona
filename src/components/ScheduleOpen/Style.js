@@ -58,6 +58,8 @@ export const OpenScheduleTableActivity = styled.div`
     background-color: ${(props) => {
       return props.type === "Pole" ? "#ffb1d6" : "#d19ff4";
     }};
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
     top: 0;
     left: 0;
   }
