@@ -80,4 +80,9 @@ export const SwitchDateButton = styled.button`
   aspect-ratio: 1;
   border-radius: 50%;
   background: ${colors.darkEcrue};
+  transition: all 100ms;
+
+  &:active {
+    transform: scale(1.2);
+  }
 `;

@@ -11,6 +11,7 @@ import {
 import generateTableData from "./generateTableData.js";
 import { breakingPointPhoneWOPx } from "../../Style";
 import { ReactComponent as BackArrow } from "../../assets/back-icon.svg";
+import ModalForm from "../ModalForm/ModalForm";
 
 function ScheduleOpen(props) {
   const [activeStartDate, setActiveStartDate] = useState(new Date());
@@ -18,15 +19,23 @@ function ScheduleOpen(props) {
     window.innerWidth <= breakingPointPhoneWOPx ? 3 : 5
   );
   const [tableData, setTableData] = useState(null);
+
+  // Form states
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [name, setName] = useState(null);
+  const [surname, setSurname] = useState(null);
+  const [telephone, setTelephone] = useState(null);
+  const [activity, setActivity] = useState(null);
+
   // Initial fetching data and creating table
   useEffect(() => {
     setTableData(generateTableData(new Date(), numberOfDays));
   }, []);
 
-  // Rerender on change of number of days
-  useEffect(() => {
-    setTableData(generateTableData(activeStartDate, numberOfDays));
-  }, [numberOfDays]);
+  // // Rerender on change of number of days
+  // useEffect(() => {
+  //   setTableData(generateTableData(activeStartDate, numberOfDays));
+  // }, [numberOfDays]);
 
   // Rerender on change of startDate
   useEffect(() => {
@@ -35,6 +44,15 @@ function ScheduleOpen(props) {
 
   return (
     <>
+      {/* Form modal */}
+      <ModalForm
+        isOpen={isModalOpen}
+        isOpenSetter={setIsModalOpen}
+        activity={activity}
+        nameSetter={setName}
+        surnameSetter={setSurname}
+        telephoneSetter={setTelephone}
+      ></ModalForm>
       {/* Buttons */}
       <SwitchDateButtonWrapper>
         <SwitchDateButton
@@ -90,7 +108,19 @@ function ScheduleOpen(props) {
                 }`}</OpenScheduleTableColumnDate>
                 {columnInfo.data.map((activityInfo) => {
                   return (
-                    <OpenScheduleTableActivity type={activityInfo.type}>
+                    <OpenScheduleTableActivity
+                      type={activityInfo.type}
+                      onClick={() => {
+                        // After clicking on activity
+                        setActivity({
+                          date: columnInfo.info.date,
+                          type: activityInfo.type,
+                          start: activityInfo.start,
+                          end: activityInfo.end,
+                        });
+                        setIsModalOpen(true);
+                      }}
+                    >
                       <span>{activityInfo.type}</span>
                       <span>
                         {activityInfo.start}-{activityInfo.end}

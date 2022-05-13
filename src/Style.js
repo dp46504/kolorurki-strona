@@ -11,6 +11,8 @@ export const colors = {
   white75: "#fffd",
   lightGray: "#bababa",
   lighterGray: "#dcdcdc",
+  black50: "#000a",
+  black: "#000",
   ecrue: "#f8f5f2",
   ecrue75: "#f8f5f2dd",
   darkEcrue: "#d6d3d0",
