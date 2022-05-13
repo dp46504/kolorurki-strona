@@ -2,6 +2,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import { ReactComponent as BackArrow } from "./assets/back-icon.svg";
 
 export const breakingPointPhone = "600px";
+export const breakingPointPhoneWOPx = breakingPointPhone.split("px")[0];
 export const colors = {
   gray: "#434343",
   white: "#ffff",
@@ -9,8 +10,10 @@ export const colors = {
   white25: "#fff5",
   white75: "#fffd",
   lightGray: "#bababa",
+  lighterGray: "#dcdcdc",
   ecrue: "#f8f5f2",
   ecrue75: "#f8f5f2dd",
+  darkEcrue: "#d6d3d0",
 };
 
 export const GlobalStyle = createGlobalStyle`
@@ -61,7 +64,7 @@ export const MainPicture = styled.div`
 export const MainTitle = styled.div`
   font-family: "Playfair Display";
   margin: 2rem 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
   text-align: center;
   color: ${colors.gray};
@@ -70,8 +73,10 @@ export const MainTitle = styled.div`
 export const MainDescription = styled.div`
   font-family: "Lato";
   text-align: center;
+  width: 75%;
+  line-height: 180%;
   color: ${colors.gray};
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
 `;
 
 export const SectionTitle = styled.div`

@@ -8,7 +8,6 @@ import {
   Team,
   Schedule,
   colors,
-  ScheduleOpen,
   WideColorPanel,
 } from "../../Style";
 import {
@@ -21,6 +20,7 @@ import {
   PersonCardName,
 } from "./Style";
 import strings from "../../strings.json";
+import ScheduleOpen from "../ScheduleOpen/ScheduleOpen";
 
 function Body(props) {
   // Drag to scroll on Slider Sections

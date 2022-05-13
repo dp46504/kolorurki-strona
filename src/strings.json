@@ -70,5 +70,72 @@
         "DESCRIPTION": "Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum pole Lorem ipsum"
       }
     ]
+  },
+  "OPEN": {
+    "POLE": {
+      "AVAILABILITY": [
+        [],
+        [
+          [16, 17],
+          [17, 18],
+          [18, 19],
+          [19, 20],
+          [20, 21],
+          [21, 22]
+        ],
+        [
+          [16, 17],
+          [17, 18],
+          [18, 19],
+          [19, 20],
+          [20, 21],
+          [21, 22]
+        ],
+        [
+          [16, 17],
+          [17, 18],
+          [18, 19],
+          [19, 20],
+          [20, 21],
+          [21, 22]
+        ],
+        [
+          [16, 17],
+          [17, 18],
+          [18, 19],
+          [19, 20],
+          [20, 21],
+          [21, 22]
+        ],
+        [
+          [16, 17],
+          [17, 18],
+          [18, 19],
+          [19, 20],
+          [20, 21]
+        ],
+        [
+          [10, 11],
+          [11, 12]
+        ]
+      ]
+    },
+    "AERIAL": {
+      "AVAILABILITY": [
+        [],
+        [
+          [16, 17],
+          [21, 22]
+        ],
+        [[16, 17]],
+        [],
+        [
+          [16, 17],
+          [21, 22]
+        ],
+        [],
+        []
+      ]
+    }
   }
 }
