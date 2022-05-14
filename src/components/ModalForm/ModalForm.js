@@ -43,6 +43,8 @@ function ModalForm(props) {
       <SubmitButton
         onClick={() => {
           //   TODO SEND TO BACKEND INFO
+
+          // Closing Modal
           props.isOpenSetter((lastValue) => !lastValue);
         }}
       >

@@ -58,7 +58,14 @@ function MenuBar(props) {
 
             <MenuItem>Cennik</MenuItem>
             <MenuItem>Galeria</MenuItem>
-            <MenuItem>Kontakt</MenuItem>
+
+            <a href="#contact" onClick={toggleMenu}>
+              <MenuItem>Kontakt</MenuItem>
+            </a>
+
+            <a href="#map" onClick={toggleMenu}>
+              <MenuItem>Dojazd</MenuItem>
+            </a>
           </MenuItems>
           <SocialMediaLinks>
             <a href="https://www.facebook.com/Ko%C5%82o-rurki-100192172080611">

@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { ReactComponent as BackArrow } from "./assets/back-icon.svg";
+import { Popup } from "react-leaflet";
 
 export const breakingPointPhone = "600px";
 export const breakingPointPhoneWOPx = breakingPointPhone.split("px")[0];
@@ -26,6 +27,18 @@ html, body{
     scroll-behavior:smooth ;
 }
 
+// Map width and height
+.leaflet-container{
+  width:100%;
+  aspect-ratio:1.8;
+  box-shadow:0 0 20px ${colors.lightGray};
+  z-index:2;
+  @media screen and (max-width: ${breakingPointPhone}) {
+    width:100vw;
+    aspect-ratio:1;
+  }
+}
+
 a{
   text-decoration: none;
   &:any-link{
@@ -39,6 +52,35 @@ a{
     .noscroll{
       overflow: hidden;
     }
+`;
+
+export const PopupStyled = styled(Popup)`
+  border-radius: 20px;
+
+  & .leaflet-popup-content-wrapper {
+    border-radius: 0;
+  }
+
+  & #googleRouteButton {
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    background: ${colors.ecrue};
+    border: 2px solid ${colors.lighterGray};
+    box-shadow: 5px 5px 5px ${colors.lighterGray};
+    color: ${colors.black50};
+    transition: all 250ms;
+    margin-top: 1rem;
+
+    & a {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 `;
 
 export const BodyContainer = styled.div`

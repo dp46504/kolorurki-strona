@@ -9,6 +9,7 @@ import {
   Schedule,
   colors,
   WideColorPanel,
+  PopupStyled,
 } from "../../Style";
 import {
   CardContainer,
@@ -21,6 +22,7 @@ import {
 } from "./Style";
 import strings from "../../strings.json";
 import ScheduleOpen from "../ScheduleOpen/ScheduleOpen";
+import { MapContainer, TileLayer, useMap, Marker } from "react-leaflet";
 
 function Body(props) {
   // Drag to scroll on Slider Sections
@@ -141,7 +143,34 @@ function Body(props) {
         {/* Exiting wide color panel */}
       </WideColorPanel>
       {/* Entering body again */}
-      <BodyContainer></BodyContainer>
+      <BodyContainer>
+        {/* Contact */}
+        <SectionTitle id="contact">Kontakt</SectionTitle>
+
+        {/* Map */}
+        <SectionTitle id="map">Gdzie nas znaleźć</SectionTitle>
+
+        <MapContainer
+          center={[53.43452379512689, 14.531040722933511]}
+          zoom={17}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={[53.43452379512689, 14.531040722933511]}>
+            <PopupStyled>
+              <center>Koło rurki</center>
+              <br />
+
+              <center>Jagiellońska 34B, 70-382 Szczecin</center>
+              <a href="https://goo.gl/maps/kRatPWg4SDSqZL7D8">
+                <button id="googleRouteButton">Wyznacz trasę</button>
+              </a>
+            </PopupStyled>
+          </Marker>
+        </MapContainer>
+      </BodyContainer>
     </>
   );
 }

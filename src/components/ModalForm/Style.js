@@ -35,7 +35,7 @@ export const ActivityType = styled.div`
 export const ActivityDate = styled.div`
   width: 100%;
   font-size: 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 `;
 
 const Input = styled.input`

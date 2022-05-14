@@ -6,6 +6,7 @@ export const OpenScheduleTable = styled.div`
   width: 100%;
   flex-direction: row;
   gap: 0.3rem;
+  margin-bottom: 2rem;
 `;
 
 export const OpenScheduleTableColumn = styled.div`
@@ -47,7 +48,7 @@ export const OpenScheduleTableActivity = styled.div`
 
   &:hover {
     transform: scale(1.1);
-    z-index: 100;
+    z-index: 20;
   }
 
   &::after {
