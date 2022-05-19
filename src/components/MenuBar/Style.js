@@ -42,11 +42,10 @@ export const MenuBarOutContainer = styled.div`
     background-color: ${colors.white50};
     transition: all 250ms;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     left: -100vw;
     top: 0;
     backdrop-filter: blur(10px);
-    overflow: scroll;
     margin-bottom: 1rem;
   }
 `;
@@ -64,8 +63,9 @@ export const Container = styled.div`
   @media screen and (max-width: ${breakingPointPhone}) {
     flex-direction: column;
     padding: 0;
-    width: fit-content;
+    width: 100%;
     height: 100%;
+    overflow: scroll;
   }
 `;
 

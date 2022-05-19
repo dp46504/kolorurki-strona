@@ -8,7 +8,8 @@ import {
   BurgerMenu,
   BlurLayer,
 } from "./Style";
-import { breakingPointPhone } from "../../Style";
+import classnames from "classnames";
+import { breakingPointPhoneWOPx } from "../../Style";
 import Logo from "../Logo/Logo";
 import { ReactComponent as FacebookIcon } from "../../assets/facebook-icon.svg";
 import { ReactComponent as InstagramIcon } from "../../assets/instagram-icon.svg";
@@ -16,36 +17,37 @@ import { ReactComponent as MenuIcon } from "../../assets/menu-icon.svg";
 
 function MenuBar(props) {
   const [menuOpened, setMenuOpened] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth > breakingPointPhoneWOPx ? false : true
+  );
+
+  const menuStyles = classnames({
+    "menu-opened": menuOpened,
+    "menu-closed": !menuOpened,
+  });
 
   const toggleMenu = () => {
-    if (window.innerWidth > breakingPointPhone.split("px")[0]) {
-      return null;
-    }
+    if (!isMobile) return null;
     if (menuOpened) {
       // Close menu
-      document.getElementById("menu").style.left = "-100vw";
       setMenuOpened((previous) => !previous);
-      document.getElementsByTagName("body")[0].classList.toggle("noscroll");
+      document.getElementsByTagName("body")[0].classList.toggle("no-scroll");
     } else {
       // Open menu
-      document.getElementById("menu").style.left = "0";
       setMenuOpened((previous) => !previous);
-      document.getElementsByTagName("body")[0].classList.toggle("noscroll");
+      document.getElementsByTagName("body")[0].classList.toggle("no-scroll");
     }
   };
 
   return (
     <>
-      {/* <BlurLayer showed={menuOpened}></BlurLayer> */}
       <BurgerMenu onClick={toggleMenu}>
         <MenuIcon></MenuIcon>
       </BurgerMenu>
-      <MenuBarOutContainer id="menu">
+      <MenuBarOutContainer id="menu" className={menuStyles}>
         <Container>
           <MenuItems>
-            {window.innerWidth <= breakingPointPhone.split("px")[0] ? (
-              <Logo style={{ marginTop: "0" }}></Logo>
-            ) : null}
+            {isMobile ? <Logo style={{ marginTop: "0" }}></Logo> : null}
             <a href="#classes" onClick={toggleMenu}>
               <MenuItem>Zajęcia</MenuItem>
             </a>

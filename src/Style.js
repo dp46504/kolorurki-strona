@@ -38,6 +38,15 @@ html, body{
     aspect-ratio:1;
   }
 }
+@media screen and (max-width: ${breakingPointPhone}) {
+  
+  .menu-opened{
+    left:0;
+  }
+  .menu-closed{
+    left:-100vw;
+  }
+}
 
 a{
   text-decoration: none;
@@ -48,10 +57,10 @@ a{
 *{
     box-sizing:border-box;
 
-    }
-    .noscroll{
+}
+.no-scroll{
       overflow: hidden;
-    }
+}
 `;
 
 export const PopupStyled = styled(Popup)`
