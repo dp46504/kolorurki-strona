@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import {
   ModalWrapper,
@@ -13,6 +13,7 @@ import {
 
 function ModalForm(props) {
   if (!props.isOpen) return null;
+
   return ReactDOM.createPortal(
     <ModalWrapper>
       <ActivityType>{props.activity.type}</ActivityType>

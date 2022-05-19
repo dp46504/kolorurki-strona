@@ -27,6 +27,11 @@ function ScheduleOpen(props) {
   const [telephone, setTelephone] = useState(null);
   const [activity, setActivity] = useState(null);
 
+  useEffect(() => {
+    // Adding no-scroll on body uppon opening modal
+    document.getElementsByTagName("body")[0].classList.toggle("no-scroll");
+  }, [isModalOpen]);
+
   // Initial fetching data and creating table
   useEffect(() => {
     setTableData(generateTableData(new Date(), numberOfDays));
