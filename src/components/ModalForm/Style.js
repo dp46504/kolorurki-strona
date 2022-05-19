@@ -3,7 +3,7 @@ import { colors } from "../../Style";
 
 export const ModalWrapper = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
