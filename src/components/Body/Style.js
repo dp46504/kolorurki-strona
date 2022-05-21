@@ -54,7 +54,8 @@ export const CardDescription = styled.div`
   overflow-y: hidden;
   overflow-wrap: break-word;
 
-  &:hover {
+  &:hover,
+  &:active {
     overflow-y: scroll;
   }
 

@@ -36,6 +36,7 @@ export const OpenScheduleTableActivity = styled.div`
   text-align: center;
   align-items: center;
   width: 100%;
+  cursor: pointer;
   font-family: "Lato";
   border-radius: 0.3rem;
   text-transform: capitalize;
