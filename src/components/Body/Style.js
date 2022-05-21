@@ -75,12 +75,13 @@ export const CardDescription = styled.div`
 
 export const PersonCardDescription = styled.div`
   opacity: 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
   font-family: "Lato";
+  font-size: 0.9rem;
   width: 100%;
   height: 100%;
   background-color: ${colors.ecrue75};
@@ -120,6 +121,7 @@ export const PersonCardContainer = styled.div`
   background-size: cover;
 
   &:hover ${PersonCardDescription} {
+    display: flex;
     opacity: 1;
   }
 `;
@@ -129,6 +131,6 @@ export const PersonCardName = styled.div`
   text-align: center;
   font-weight: 300;
   font-family: "Lato";
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
 `;
