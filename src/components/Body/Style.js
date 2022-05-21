@@ -51,7 +51,13 @@ export const CardDescription = styled.div`
   font-family: "Lato";
   font-size: 0.9em;
   height: 7rem;
-  overflow-y: scroll;
+  overflow-y: hidden;
+  overflow-wrap: break-word;
+
+  &:hover {
+    overflow-y: scroll;
+  }
+
   &::-webkit-scrollbar {
     transition: all 250ms;
     width: 0.2rem;

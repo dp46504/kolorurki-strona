@@ -54,6 +54,29 @@ function Body(props) {
     classesSection.scrollLeft = 0;
   }, []);
 
+  const getShortenText = (id, text, n_words) => {
+    let wordArray = text.split(" ");
+    if (n_words > wordArray.length) n_words = wordArray.length;
+    let newTextArray = wordArray.slice(0, n_words);
+    let newText = newTextArray.reduce((accum, active) => {
+      return accum + " " + active;
+    });
+    let container = document.createElement("div");
+
+    let textElement = document.createElement("div");
+    textElement.textContent = newText;
+
+    let button = document.createElement("button");
+    button.value = "więcej...";
+    button.addEventListener("click", () => {
+      let parent = document.getElementById(id);
+      parent.innerHTML = "";
+      parent.innerHTML = text;
+    });
+
+    return [textElement, button];
+  };
+
   return (
     <>
       <BodyContainer>
@@ -69,12 +92,13 @@ function Body(props) {
         <BodyContainer>
           {/* Content */}
           <Classes id="classes_section">
-            {strings.SECTIONS.ZAJECIA.CARDS.map((info) => {
+            {strings.SECTIONS.ZAJECIA.CARDS.map((info, index) => {
+              const id = `class_card_${info.index}`;
               return (
                 <CardContainer>
                   <CardImage image={info.IMAGE}></CardImage>
                   <CardTitle>{info.TITLE}</CardTitle>
-                  <CardDescription>{info.DESCRIPTION}</CardDescription>
+                  <CardDescription id={id}>{info.DESCRIPTION}</CardDescription>
                 </CardContainer>
               );
             })}
