@@ -22,7 +22,8 @@ import {
 } from "./Style";
 import strings from "../../strings.json";
 import ScheduleOpen from "../ScheduleOpen/ScheduleOpen";
-import { MapContainer, TileLayer, useMap, Marker } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
+import Pricing from "../Pricing/Pricing";
 
 function Body(props) {
   // Drag to scroll on Slider Sections
@@ -159,8 +160,12 @@ function Body(props) {
       <WideColorPanel>
         {/* Entering body again */}
         <BodyContainer>
-          {/* Content */}
+          {/* OpenSchedule */}
           <ScheduleOpen></ScheduleOpen>
+
+          {/* Pricing */}
+          <SectionTitle id="price">Cennik</SectionTitle>
+          <Pricing></Pricing>
 
           {/* Exiting body */}
         </BodyContainer>
