@@ -6,6 +6,8 @@ export const Container = styled.div`
   width: 100%;
   height: fit-content;
   flex-direction: column;
+  align-items: center;
+
   /* border: 1px solid ${colors.lighterGray}; */
 `;
 
@@ -16,7 +18,9 @@ export const SubTitle = styled.div`
   display: flex;
   flex-direction: column;
   color: ${colors.gray};
+  text-align: center;
   margin: 0.3rem 0 1.5rem 0;
+  max-width: 50ch;
 `;
 
 export const Title = styled.div`
@@ -26,7 +30,9 @@ export const Title = styled.div`
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: ${colors.gray};
+  word-wrap: break-word;
 
   & + :not(${SubTitle}) {
     margin-top: 3.5rem;
@@ -81,11 +87,13 @@ export const LineRight = styled.span`
 export const TitleWDivider = styled(Line)`
   font-weight: bold;
   position: relative;
+  max-width: 50ch;
+
   &::after {
     position: absolute;
     content: "";
     width: 100%;
-    height: 0.15rem;
+    height: 0.13rem;
     left: 0;
     bottom: -0.1rem;
     background-color: ${colors.lighterLeadRed};

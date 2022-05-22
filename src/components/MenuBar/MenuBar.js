@@ -58,7 +58,9 @@ function MenuBar(props) {
               <MenuItem>Grafik</MenuItem>
             </a>
 
-            <MenuItem>Cennik</MenuItem>
+            <a href="#price" onClick={toggleMenu}>
+              <MenuItem>Cennik</MenuItem>
+            </a>
             <MenuItem>Galeria</MenuItem>
 
             <a href="#contact" onClick={toggleMenu}>
