@@ -22,19 +22,19 @@ function MenuBar(props) {
   );
 
   const menuStyles = classnames({
-    "menu-opened": menuOpened,
-    "menu-closed": !menuOpened,
+    "menu-opened": menuOpened && window.innerWidth < breakingPointPhoneWOPx,
+    "menu-closed": !menuOpened && window.innerWidth < breakingPointPhoneWOPx,
   });
 
   const toggleMenu = () => {
     if (!isMobile) return null;
     if (menuOpened) {
       // Close menu
-      setMenuOpened((previous) => !previous);
+      setMenuOpened(false);
       document.getElementsByTagName("body")[0].classList.toggle("no-scroll");
     } else {
       // Open menu
-      setMenuOpened((previous) => !previous);
+      setMenuOpened(true);
       document.getElementsByTagName("body")[0].classList.toggle("no-scroll");
     }
   };

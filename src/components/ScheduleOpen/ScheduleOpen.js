@@ -29,7 +29,11 @@ function ScheduleOpen(props) {
 
   useEffect(() => {
     // Adding no-scroll on body uppon opening modal
-    document.getElementsByTagName("body")[0].classList.toggle("no-scroll");
+    if (isModalOpen) {
+      document.getElementsByTagName("body")[0].classList.add("no-scroll");
+    } else {
+      document.getElementsByTagName("body")[0].classList.remove("no-scroll");
+    }
   }, [isModalOpen]);
 
   // Initial fetching data and creating table

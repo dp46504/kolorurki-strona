@@ -40,15 +40,13 @@ html, body{
     aspect-ratio:1;
   }
 }
-@media screen and (max-width: ${breakingPointPhone}) {
-  
+
   .menu-opened{
-    left:0;
+    left:0 !important;
   }
   .menu-closed{
-    left:-100vw;
+    left:-100vw !important;
   }
-}
 
 a{
   text-decoration: none;
