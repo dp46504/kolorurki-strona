@@ -101,7 +101,7 @@ function Pricing(props) {
           <LineRight>&nbsp;- 400 zł</LineRight>
         </Line>
 
-        <TitleWDivider>2 OSOBA:</TitleWDivider>
+        <TitleWDivider>2 OSOBY:</TitleWDivider>
         <Line>
           <LineLeft>1 WEJŚCIE</LineLeft>
           <LineRight>&nbsp;- 180 zł</LineRight>

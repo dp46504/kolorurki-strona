@@ -32,7 +32,7 @@ export const Title = styled.div`
   flex-direction: column;
   align-items: center;
   color: ${colors.gray};
-  /* word-wrap: break-word; */
+  word-wrap: break-word;
 
   & + :not(${SubTitle}) {
     margin-top: 3.5rem;
