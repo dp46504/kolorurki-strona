@@ -50,7 +50,8 @@ export const CardDescription = styled.div`
   color: ${colors.gray};
   font-family: "Lato";
   font-size: 0.9em;
-  height: 7rem;
+  height: fit-content;
+  max-height: 10rem;
   overflow-y: hidden;
   overflow-wrap: break-word;
 
