@@ -14,6 +14,7 @@ export const Container = styled.div`
 export const SubTitle = styled.div`
   font-family: "Lato";
   letter-spacing: 0.02rem;
+  line-height: 1.6rem;
   font-size: 0.9rem;
   display: flex;
   flex-direction: column;
