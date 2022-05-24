@@ -27,12 +27,12 @@ export const Title = styled.div`
   font-family: "Playfair Display";
   font-weight: bold;
   letter-spacing: 0.05rem;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: ${colors.gray};
-  word-wrap: break-word;
+  /* word-wrap: break-word; */
 
   & + :not(${SubTitle}) {
     margin-top: 3.5rem;
@@ -69,7 +69,7 @@ export const Line = styled.div`
   display: flex;
   margin: 1.2rem 0;
   color: ${colors.gray};
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding-left: 1rem;
 `;
 
@@ -88,6 +88,7 @@ export const TitleWDivider = styled(Line)`
   font-weight: bold;
   position: relative;
   max-width: 50ch;
+  text-align: center;
 
   &::after {
     position: absolute;

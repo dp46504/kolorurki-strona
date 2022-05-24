@@ -93,7 +93,7 @@ export const PopupStyled = styled(Popup)`
 `;
 
 export const BodyContainer = styled.div`
-  width: clamp(100px, 90%, 1200px);
+  width: clamp(100px, 95%, 1200px);
   height: 100%;
   margin: 0 auto;
   display: flex;
