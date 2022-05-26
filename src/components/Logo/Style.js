@@ -10,6 +10,7 @@ export const LogoBox = styled.div`
   aspect-ratio: 2;
   font-size: 0.5rem;
   font-family: "Lato";
+  user-select: none;
   @media screen and (max-width: ${breakingPointPhone}) {
     transform: scale(0.8);
     margin-top: 0;
@@ -41,7 +42,7 @@ export const LogoUpperText = styled.div`
   color: ${colors.gray};
   top: 1.3em;
   left: 4.7em;
-  font-family: "Playfair Display";
+  font-family: "Sofia", cursive;
 `;
 
 export const LogoBottomText = styled.div`

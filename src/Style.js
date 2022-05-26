@@ -106,10 +106,10 @@ export const MainPicture = styled.div`
   height: calc(100vh - 15.5rem);
   background: ${(props) => {
     return `linear-gradient(
-    to top, transparent, ${colors.white}
+    to top,  transparent 60%,  ${colors.white} 
   ), url(${props.image})`;
   }};
-  background-position: center bottom;
+  background-position: center 30%;
   background-repeat: no-repeat;
   background-size: cover;
 `;

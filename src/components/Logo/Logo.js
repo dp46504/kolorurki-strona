@@ -12,7 +12,7 @@ function Logo(props) {
     <LogoBox>
       <LogoBall></LogoBall>
       <LogoLine></LogoLine>
-      <LogoUpperText>koło rurki</LogoUpperText>
+      <LogoUpperText>kolo rurki</LogoUpperText>
       <LogoBottomText>
         pole dance aerial dance<br></br>and more
       </LogoBottomText>
