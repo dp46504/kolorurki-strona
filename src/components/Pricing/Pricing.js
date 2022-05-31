@@ -213,21 +213,27 @@ function Pricing(props) {
         }}
       >
         {/* Left Arrow */}
-        <ArrowIcon
-          style={LeftArrow}
-          onClick={() => {
-            if (bookmark === 0) return;
-            setBookmark((previous) => previous - 1);
-          }}
-        ></ArrowIcon>
+        {bookmark !== 0 && (
+          <ArrowIcon
+            style={LeftArrow}
+            onClick={() => {
+              if (bookmark === 0) return;
+              setBookmark((previous) => previous - 1);
+            }}
+          ></ArrowIcon>
+        )}
+
         {/* Right Arrow */}
-        <ArrowIcon
-          style={RightArrow}
-          onClick={() => {
-            if (bookmark === menuBookmarks.length - 1) return;
-            setBookmark((previous) => previous + 1);
-          }}
-        ></ArrowIcon>
+        {bookmark !== menuBookmarks.length - 1 && (
+          <ArrowIcon
+            style={RightArrow}
+            onClick={() => {
+              if (bookmark === menuBookmarks.length - 1) return;
+              setBookmark((previous) => previous + 1);
+            }}
+          ></ArrowIcon>
+        )}
+
         <Divider
           side={1}
           text={`"${bookmark + 1} / ${menuBookmarks.length}"`}
