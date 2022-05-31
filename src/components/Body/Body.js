@@ -182,6 +182,8 @@ function Body(props) {
         <MapContainer
           center={[53.43452379512689, 14.531040722933511]}
           zoom={17}
+          dragging={false}
+          touchZoom={true}
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
