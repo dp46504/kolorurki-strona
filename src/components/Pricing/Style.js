@@ -1,15 +1,33 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 import { colors, breakingPointPhoneWOPx } from "../../Style";
 
-export const Container = styled.div`
-  display: flex;
-  width: 100%;
-  height: fit-content;
-  flex-direction: column;
-  align-items: center;
-
-  /* border: 1px solid ${colors.lighterGray}; */
+const show = keyframes`
+from{opacity:0}
+to{opacity:1}
 `;
+
+export const LeftArrow = {
+  position: "absolute",
+  top: "calc(50% - 1rem)",
+  left: "1rem",
+  height: "2rem",
+  fill: colors.lightGray,
+  aspectRatio: 1,
+  cursor: "pointer",
+  zIndex: 1000,
+};
+export const RightArrow = {
+  position: "absolute",
+  top: "calc(50% - 1rem)",
+  right: "1rem",
+  height: "2rem",
+  fill: colors.lightGray,
+  transform: "rotate(180deg)",
+  aspectRatio: 1,
+  cursor: "pointer",
+  zIndex: 1000,
+};
 
 export const SubTitle = styled.div`
   font-family: "Lato";
@@ -49,7 +67,15 @@ export const Divider = styled.div`
 
   &::after {
     position: absolute;
-    content: "";
+    content: ${(props) => {
+      return props.text ? props.text : "";
+    }};
+    color: ${colors.ecrue};
+    font-weight: bold;
+    font-family: "Lato";
+    font-size: 1.3rem;
+    display: grid;
+    place-items: center;
     width: 4rem;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -100,4 +126,21 @@ export const TitleWDivider = styled(Line)`
     bottom: -0.1rem;
     background-color: ${colors.lighterLeadRed};
   }
+`;
+
+export const Content = styled.div`
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 `;

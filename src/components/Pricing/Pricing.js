@@ -8,12 +8,20 @@ import {
   SubTitle,
   Title,
   TitleWDivider,
+  LeftArrow,
+  RightArrow,
+  Content,
 } from "./Style";
+import { ReactComponent as ArrowIcon } from "../../assets/back-icon.svg";
 
 function Pricing(props) {
-  const [bookmark, setBookmark] = useState(5);
+  const [bookmark, setBookmark] = useState(0);
+  let touchStartX = 0;
+  let touchEndX = 0;
+  let touchStartY = 0;
+  let touchEndY = 0;
   const menuBookmarks = [
-    <>
+    <Content>
       <Title>
         <div>KARNET</div>
         <div>POLE/ EXOTIC/ AERIAL</div>
@@ -35,8 +43,8 @@ function Pricing(props) {
         <LineLeft>12 WEJŚĆ</LineLeft>
         <LineRight>&nbsp;- 370 zł</LineRight>
       </Line>
-    </>,
-    <>
+    </Content>,
+    <Content>
       <Title>
         <div>KARNET</div>
         <div>ROZCIĄGANIE/WZMACNIANIE/JOGA</div>
@@ -59,8 +67,8 @@ function Pricing(props) {
         <LineLeft>12 WEJŚĆ</LineLeft>
         <LineRight>&nbsp;- 280 zł</LineRight>
       </Line>
-    </>,
-    <>
+    </Content>,
+    <Content>
       <Title>
         <div>TRENINGI INDYWIDUALNE</div>
       </Title>
@@ -84,8 +92,8 @@ function Pricing(props) {
         <LineLeft>4 WEJŚCIA</LineLeft>
         <LineRight>&nbsp;- 650 zł</LineRight>
       </Line>
-    </>,
-    <>
+    </Content>,
+    <Content>
       <Title>OPEN</Title>
       <SubTitle>(godzina na rurce bez nadzoru trenera)</SubTitle>
 
@@ -117,8 +125,8 @@ function Pricing(props) {
         <LineLeft>NIELIMITOWANY</LineLeft>
         <LineRight>&nbsp;- 200 zł</LineRight>
       </Line>
-    </>,
-    <>
+    </Content>,
+    <Content>
       <Title>AERIAL HOOP</Title>
       <SubTitle>
         zespół KR wprowadził dwie możliwości uczęszczania na zajęcia Aerial
@@ -152,8 +160,8 @@ function Pricing(props) {
         zabawę - wierzcie... wysiłek jest niemały, więc chwila na odpoczynek
         dzięki pracy w duecie czasami wskazana :D
       </SubTitle>
-    </>,
-    <>
+    </Content>,
+    <Content>
       <Title>
         <div style={{ fontWeight: "bold" }}>KARNET VIP W PRZEDSPRZEDAŻY!</div>
         <div style={{ fontWeight: "bold" }}>490zł</div>
@@ -163,15 +171,69 @@ function Pricing(props) {
         limitu wejść. Karnet ważny jest przez miesiąc. Nie ogranicza Cię nic,
         poza ilością godzin w dobie i Twoim zapałem.
       </SubTitle>
-    </>,
+    </Content>,
   ];
+
+  const handleGesture = () => {
+    if (touchEndX === touchStartX || touchStartY === touchEndY) {
+      return;
+    } else {
+      if (
+        touchEndX < touchStartX &&
+        Math.abs(touchEndX - touchStartX) > 50 &&
+        Math.abs(touchStartY - touchEndY) < 50
+      ) {
+        if (bookmark === menuBookmarks.length - 1) return;
+
+        setBookmark((previous) => previous + 1);
+      }
+      if (
+        touchEndX > touchStartX &&
+        Math.abs(touchEndX - touchStartX) > 50 &&
+        Math.abs(touchStartY - touchEndY) < 50
+      ) {
+        if (bookmark === 0) return;
+
+        setBookmark((previous) => previous - 1);
+      }
+    }
+  };
 
   return (
     <>
-      <Container>
-        <Divider side={1}></Divider>
+      <Container
+        onTouchStart={(event) => {
+          touchStartX = event.changedTouches[0].clientX;
+          touchStartY = event.changedTouches[0].clientY;
+        }}
+        onTouchEnd={(event) => {
+          touchEndX = event.changedTouches[0].clientX;
+          touchEndY = event.changedTouches[0].clientY;
+          handleGesture();
+        }}
+      >
+        {/* Left Arrow */}
+        <ArrowIcon
+          style={LeftArrow}
+          onClick={() => {
+            if (bookmark === 0) return;
+            setBookmark((previous) => previous - 1);
+          }}
+        ></ArrowIcon>
+        {/* Right Arrow */}
+        <ArrowIcon
+          style={RightArrow}
+          onClick={() => {
+            if (bookmark === menuBookmarks.length - 1) return;
+            setBookmark((previous) => previous + 1);
+          }}
+        ></ArrowIcon>
+        <Divider
+          side={1}
+          text={`"${bookmark + 1} / ${menuBookmarks.length}"`}
+        ></Divider>
         {menuBookmarks[bookmark]}
-        <Divider></Divider>
+        <Divider text={`""`}></Divider>
       </Container>
     </>
   );
