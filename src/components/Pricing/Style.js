@@ -10,9 +10,9 @@ to{opacity:1}
 export const LeftArrow = {
   position: "absolute",
   top: "calc(50% - 1rem)",
-  left: "1rem",
+  left: ".3rem",
   height: "2rem",
-  fill: colors.lightGray,
+  fill: colors.lightGray50,
   aspectRatio: 1,
   cursor: "pointer",
   zIndex: 1000,
@@ -20,9 +20,9 @@ export const LeftArrow = {
 export const RightArrow = {
   position: "absolute",
   top: "calc(50% - 1rem)",
-  right: "1rem",
+  right: ".3rem",
   height: "2rem",
-  fill: colors.lightGray,
+  fill: colors.lightGray50,
   transform: "rotate(180deg)",
   aspectRatio: 1,
   cursor: "pointer",
