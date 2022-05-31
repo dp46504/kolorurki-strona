@@ -9,7 +9,7 @@ export const BurgerMenu = styled.div`
   left: 0.8rem;
   aspect-ratio: 1;
   display: none;
-  z-index: 102;
+  z-index: 1002;
   & * {
     width: 1.8rem;
     aspect-ratio: 1;
@@ -30,7 +30,7 @@ export const MenuBarOutContainer = styled.div`
   top: 0;
   left: 0;
   height: fit-content;
-  z-index: 100;
+  z-index: 1001;
   width: 100%;
   display: grid;
   place-items: center;
