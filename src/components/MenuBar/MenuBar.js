@@ -61,7 +61,10 @@ function MenuBar(props) {
             <a href="#price" onClick={toggleMenu}>
               <MenuItem>Cennik</MenuItem>
             </a>
-            <MenuItem>Galeria</MenuItem>
+
+            <a href="#gallery" onClick={toggleMenu}>
+              <MenuItem>Galeria</MenuItem>
+            </a>
 
             <a href="#contact" onClick={toggleMenu}>
               <MenuItem>Kontakt</MenuItem>

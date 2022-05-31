@@ -174,6 +174,8 @@ function Body(props) {
       {/* Entering body again */}
       <BodyContainer>
         {/* Contact */}
+        <SectionTitle id="gallery">Galeria</SectionTitle>
+        {/* Contact */}
         <SectionTitle id="contact">Kontakt</SectionTitle>
 
         {/* Map */}
