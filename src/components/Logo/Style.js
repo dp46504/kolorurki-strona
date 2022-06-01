@@ -43,6 +43,15 @@ export const LogoUpperText = styled.div`
   top: 1.3em;
   left: 4.7em;
   font-family: "Sofia", cursive;
+  &::after {
+    content: "-";
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    transform: scale(0.8) rotate(-30deg);
+    left: 1.85rem;
+    top: -0.08rem;
+  }
 `;
 
 export const LogoBottomText = styled.div`
