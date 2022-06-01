@@ -24,6 +24,7 @@ import strings from "../../strings.json";
 import ScheduleOpen from "../ScheduleOpen/ScheduleOpen";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import Pricing from "../Pricing/Pricing";
+import Gallery from "../Gallery/Gallery";
 
 function Body(props) {
   // Drag to scroll on Slider Sections
@@ -175,6 +176,7 @@ function Body(props) {
       <BodyContainer>
         {/* Contact */}
         <SectionTitle id="gallery">Galeria</SectionTitle>
+        <Gallery></Gallery>
         {/* Contact */}
         <SectionTitle id="contact">Kontakt</SectionTitle>
 
