@@ -18,6 +18,8 @@ export const colors = {
   ecrue: "#f8f5f2",
   ecrue75: "#f8f5f2dd",
   darkEcrue: "#d6d3d0",
+  darkerEcrue: "#b4b1b0",
+  evenDarkerEcrue: "#a290a0",
   leadRed: "#ca837e",
   lighterLeadRed: "#db948fcc",
 };

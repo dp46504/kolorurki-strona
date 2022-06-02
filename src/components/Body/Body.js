@@ -25,6 +25,7 @@ import ScheduleOpen from "../ScheduleOpen/ScheduleOpen";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import Pricing from "../Pricing/Pricing";
 import Gallery from "../Gallery/Gallery";
+import Contact from "../Contact/Contact";
 
 function Body(props) {
   // Drag to scroll on Slider Sections
@@ -179,6 +180,7 @@ function Body(props) {
         <Gallery></Gallery>
         {/* Contact */}
         <SectionTitle id="contact">Kontakt</SectionTitle>
+        <Contact></Contact>
 
         {/* Map */}
         <SectionTitle id="map">Gdzie nas znaleźć</SectionTitle>
