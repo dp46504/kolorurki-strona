@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../Style";
+import { colors, breakingPointPhone } from "../../Style";
 
 export const Container = styled.div`
   position: fixed;
@@ -14,5 +14,8 @@ export const Container = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 70%;
+  width: 85%;
+  @media screen and (max-width: ${breakingPointPhone}) {
+    width: 90%;
+  }
 `;
