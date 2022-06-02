@@ -17,13 +17,12 @@ export const GalleryContainer = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const Image = styled.div`
   width: 100%;
   aspect-ratio: 1;
   background-image: ${(props) => {
     return `url(${props.image})`;
   }};
-  background-color: white;
   background-position: center center;
   background-size: cover;
   transition: all 250ms;
